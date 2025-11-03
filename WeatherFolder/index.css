@@ -1,0 +1,144 @@
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #e3e3e3;
+    padding: 20px;
+  }
+
+  .container {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px;
+    transition: transform 0.3s ease;
+  }
+
+  .container:hover {
+    transform: translateY(-5px);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  input {
+    width: 85%;
+    padding: 14px;
+    border: 1px solid #4f7faf;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  input:focus {
+    box-shadow: 0 0 8px rgba(51, 153, 255, 0.7);
+  }
+
+  button {
+    width: 90%;
+    padding: 14px;
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(135deg, #4ca9e0, #277acb);
+    transform: translateY(-2px);
+  }
+
+  .result {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    animation: fadeIn 0.6s ease;
+    white-space: pre-line;
+    line-height: 1.6;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    animation: bounceIn 0.5s ease;
+  }
+
+  @keyframes bounceIn {
+    from { transform: scale(0.3); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* 📱 Mobile Styling */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+      height: auto;
+    }
+
+    .container {
+      width: 90%;
+      padding: 25px 20px;
+      border-radius: 12px;
+    }
+
+    input, button {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .result {
+      font-size: 14px;
+      padding: 15px;
+    }
+
+    .icon {
+      font-size: 35px;
+    }
+  }
+
+  /* 📟 Tablet Styling */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .container {
+      width: 70%;
+      padding: 30px;
+    }
+
+    input, button {
+      font-size: 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+  }
+
